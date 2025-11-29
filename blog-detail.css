@@ -1,0 +1,247 @@
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #EBD950;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#detailWrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px; /* space for navbar */
+    position: relative;
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: inherit;  /* inherits blog bgColor dynamically */
+    z-index: 9999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.nav-right a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.lang-btn {
+    padding: 4px 12px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.lang-btn.active {
+    background: black;
+    color: white;
+}
+
+
+/* ==========================================================
+   MARQUEE
+========================================================== */
+
+.marque {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.marque::-webkit-scrollbar {
+    display: none;
+}
+
+.marque h1 {
+    font-size: 8vw;
+    font-weight: 900;
+    margin-right: 40px;
+    opacity: 0.25;
+    animation: scroll 9s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+
+/* ==========================================================
+   SUBTITLE / HEADLINE
+========================================================== */
+
+#subtitle {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 1.8vw;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   TAGLINE SECTION
+========================================================== */
+
+.bodypara-section {
+    display: flex;
+    gap: 30px;
+    padding: 0 20%;
+    margin-bottom: 40px;
+}
+
+.bodyline {
+    width: 250px;
+    height: 2px;
+    background: black;
+    margin-top: 16px;
+}
+
+.blogintro {
+    max-width: 700px;
+    font-size: 1.25vw;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   IMAGE GRID
+========================================================== */
+
+.gridImages {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 0 20%;
+    margin: 40px 0;
+}
+
+.gridImages img {
+    width: 70%;
+    border-radius: 6px;
+    object-fit: cover;
+    margin: auto;   /* center each image */
+}
+
+
+/* ==========================================================
+   BODY CONTENT (HEADINGS + TEXT + CODE)
+========================================================== */
+
+.para-section {
+    display: block;
+    padding: 0 20%;
+}
+
+.section-heading {
+    font-size: 2.2vw;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.sub-heading {
+    font-size: 1.8vw;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.para-text {
+    max-width: 700px;
+    font-size: 1.25vw;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================
+   CODE BLOCKS
+========================================================== */
+
+.code-block {
+    width: 100%;
+    max-width: 700px;
+    background: #1A1A1A;
+    color: #EAEAEA;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    white-space: pre-wrap;
+    font-size: 1vw;
+    line-height: 1.5;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    font-family: "Fira Code", monospace;
+}
+
+
+/* ==========================================================
+   RESPONSIVE FIXES
+========================================================== */
+
+@media (max-width: 900px) {
+
+    #nav {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .marque h1 {
+        font-size: 12vw;
+    }
+
+    .bodypara-section {
+        padding: 0 10%;
+    }
+
+    .gridImages img {
+        width: 100%;
+    }
+
+    .para-section {
+        padding: 0 10%;
+    }
+
+    .para-text, .blogintro {
+        font-size: 16px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .sub-heading {
+        font-size: 22px;
+    }
+
+    .code-block {
+        font-size: 14px;
+    }
+}
