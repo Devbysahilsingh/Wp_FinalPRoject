@@ -1,66 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Tool Team</title>
-    <link rel="stylesheet" href="blog-detail.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Tool Team | Code Learning Blog</title>
+
+  <!-- META -->
+  <meta name="description" content="Explore 10 coding tools interactively with examples and explanations. Learn Python, JavaScript, React, Node.js, Django, and more." />
+  <meta name="author" content="School Tool Team" />
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="blog-detail.css" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="images/favicon.png" />
 </head>
 
 <body>
 
-    <!-- MAIN WRAPPER -->
-    <div id="detailWrapper">
-
-        <!-- TOP NAV (AS IT IS) -->
-        <nav id="nav">
-            <div class="nav-left">Lorem</div>
-            <!-- <div class="nav-center">INDEX ▾</div> -->
-            <!-- <div class="nav-right">
-                <a href="#">ABOUT</a>
-                <button class="lang-btn">HI</button>
-                <button class="lang-btn active">EN</button>
-            </div> -->
-        </nav>
-
-        <div class="marque">
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-        </div>
-        <p id="subtitle"></p>
-
-        <div class="bodypara-section">
-            <div class="bodyline"></div>
-            <p class="blogintro"></p>
-        </div>
-        <div id="blog-content">
-
-            <div class="right-content">
-
-                <div class="blogImageBlock">
-                    <h1 id="blog-title"></h1>
-                    <div class="gridImages" id="gridImages"></div>
-                    <div class="para-section">
-                        <div class="line"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="marque">
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-        </div>
-
+  <!-- 🔹 NAVBAR -->
+  <nav id="nav">
+    <div class="nav-left">
+      <a href="index.html" class="brand">School Tool Team</a>
     </div>
+  </nav>
 
-    <!-- SCRIPT -->
-    <script src="/js/main.js" type="module"></script>
+  <!-- 🔹 HEADER / MARQUEE -->
+  <header class="marque">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+  </header>
 
+  <!-- 🔹 BLOG INTRO -->
+  <section class="intro-section">
+      <h2 id="subtitle" class="subtitle"></h2>
+      <p class="blogintro"></p>
+  </section>
+
+  <!-- 🔹 MAIN CONTENT -->
+  <main id="blog-content">
+    <article class="content-container">
+      <div class="blogImageBlock">
+        <h1 id="blog-title"></h1>
+        <div class="gridImages" id="gridImages"></div>
+      </div>
+
+      <div class="para-section" id="contentBlock">
+        <!-- Dynamic sections loaded here via JS -->
+      </div>
+    </article>
+  </main>
+
+  <!-- 🔹 REVIEW SECTION -->
+<section id="reviewSection">
+    <h2>Leave a Review</h2>
+    <p class="review-subtitle">
+      Share your thoughts — your feedback helps us improve
+    </p>
+
+    <form id="reviewForm" novalidate>
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" />
+        <small class="error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+        <small class="error"></small>
+      </div>
+
+      <div class="input-group">
+        <label>Rating</label>
+        <div class="rating">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+        <input type="hidden" id="rating" />
+        <small class="error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" placeholder="Write your thoughts here..."></textarea>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Review</button>
+      <p id="successMsg"></p>
+    </form>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="footer">
+    <p>© 2025 School Tool Team • Learn • Code • Share </p>
+  </footer>
+
+  <!-- GSAP -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
